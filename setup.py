@@ -13,5 +13,10 @@ setup(
     author_email='mat@example.com',
     install_requires=[],
     packages=find_packages('src'),
-    package_dir={'': 'src'}
+    package_dir={'': 'src'},
+    entry_points={
+        'console_scripts': [
+            'pgbackup=pgbackup.cli:main',
+        ],
+    }
 )
